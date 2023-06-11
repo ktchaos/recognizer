@@ -1,4 +1,4 @@
-usage: [main-app.py](http://main-app.py/) [-h] [--image IMAGE] [--ref_image REF_IMAGE] [--thres THRES] [--visual VISUAL]
+
 
 steps:
 
