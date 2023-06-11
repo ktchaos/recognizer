@@ -20,15 +20,14 @@ def main():
     img4 = cv2.drawKeypoints(img1, kp1, outImage=None)
     img5 = cv2.drawKeypoints(img2, kp2, outImage=None)
 
-    if True:
-        f, axarr = plt.subplots(1, 2)
-        axarr[0].imshow(img4)
-        axarr[1].imshow(img5)
-        plt.show()
+    f, axarr = plt.subplots(1, 2)
+    axarr[0].imshow(img4)
+    axarr[1].imshow(img5)
+    plt.show()
 
-        img3 = cv2.drawMatches(img1, kp1, img2, kp2, matches, flags=2, outImg=None)
-        plt.imshow(img3)
-        plt.show()
+    img3 = cv2.drawMatches(img1, kp1, img2, kp2, matches, flags=2, outImg=None)
+    plt.imshow(img3)
+    plt.show()
 
     score = 0
     for match in matches:
@@ -40,19 +39,4 @@ def main():
     print('----|| MODULE ENDED ||----')
 
 
-# def setup(argv):
-#     parser = argparse.ArgumentParser()
-#     parser.add_argument('--image', help='Provide signature image path needs to be verified', type=str, default='Data/signature.jpg')
-#     parser.add_argument('--ref_image', help='Provide reference signature image path needs to be verified', type=str, default='Data/ref-signature.jpg')
-#     parser.add_argument('--thres', help='Signature matching threshold', type=int, default=20)
-#     parser.add_argument('--visual', help='Visulisation of result', type=bool, default=True)
-#     return parser.parse_args(argv)
-
 main()
-
-# if __name__ == '__main__':
-    # '''
-    # Configuration
-    # '''
-    # arguments = setup(sys.argv[1:])
-    # main(args=arguments)
